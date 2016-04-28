@@ -7,15 +7,15 @@
 function palindrome(str) {
 
     // to lower
-    str.toLowerCase();
+    str = str.toLowerCase();
 
     /*
-     [^a-z0-9] - to Remove non Alpha-Numeric characters
+     [^a-zA-Z0-9] - to Remove non Alpha-Numeric characters
      \s+ - match any collections of spaces
      \r?\n|\r - match all new line
      /gmi - global, multi-line, case insensitive
      */
-    str = str.replace(/[^a-z0-9 \s+]/g, '').replace(/\s+/g, '');
+    str = str.replace(/[^a-zA-Z0-9 \s+]/g, '').replace(/\s+/g, '');
 
     console.log(str);
 
