@@ -17,23 +17,8 @@ function palindrome(str) {
      */
     str = str.replace(/[^a-zA-Z0-9 \s+]/g, '').replace(/\s+/g, '');
 
-    console.log(str);
-
-
-    var strLength = str.length;
-
-    // create array
-    var strArray = str.split("");
-
-    for (var i = 0; i < strLength / 2; i++) {
-        var left = strArray[i];
-        var right = strArray[strLength -1 - i];
-
-        if (left !== right) {
-            return false;
-        }
-    }
-    return true;
+    // create reverse string and compare
+    return str == str.split('').reverse().join('');
 }
 
 
